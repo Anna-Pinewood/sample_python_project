@@ -203,3 +203,8 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+# Data
+data/
+
+# macbook
+.DS_Store
