@@ -1,0 +1,39 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+
+Please provide:
+- The absolute bare minimum code that works
+- Direct executable statements only - NO functions
+- NO try-except blocks or error handling
+- Descriptive variable names
+- Only essential imports
+- Code that runs immediately when pasted into a notebook cell
+
+## Example of what I DON'T want:
+```python
+def process_data(filename):
+    try:
+        df = pd.read_csv(filename)
+        processed = df.groupby('category').mean()
+        return processed
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+result = process_data('data.csv')
+print(result)
+```
+
+## Example of what I DO want:
+```python
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+result = df.groupby('category').mean()
+result  # Jupyter will display this automatically
+```
+
+Give me just the raw code with minimal necessary comments. Remember: fewer lines is better!
