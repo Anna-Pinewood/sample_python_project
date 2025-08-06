@@ -6,5 +6,6 @@ uv venv --python 3.11 .venv
 
 ### Запуск скрипта
 ```bash
+from dotenv import load_dotenv
 load_dotenv(dotenv_path=project_root / ".env") # для конфига
 ```

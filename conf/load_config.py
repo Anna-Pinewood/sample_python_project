@@ -1,15 +1,18 @@
+import os
 from hydra import compose, initialize, core
-from omegaconf import DictConfig
+from omegaconf import DictConfig, OmegaConf
+
+OmegaConf.register_new_resolver("env", os.getenv)
 
 initialize(config_path="../conf", job_name="test", version_base=None)
 
-def load_config() -> DictConfig:    
+
+def load_config() -> DictConfig:
     cfg = compose(config_name="config")
     core.global_hydra.GlobalHydra.instance().clear()
-    
+
     return cfg
 
 
 if __name__ == '__main__':
     print(load_config())
-
