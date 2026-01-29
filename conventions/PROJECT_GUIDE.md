@@ -32,20 +32,6 @@ This document is the single source of rules and practices for the project. Our g
   - `info`: high-level control flow
   - `warning`, `error`, `critical`: unexpected failures
 
-### Docstrings
-
-- Use **Google-style** format:
-  ```python
-  def fetch_tool_description(tool_id: str) -> ToolDescription:
-      """Fetch metadata for a given tool from the MCP registry.
-
-      Args:
-          tool_id: Unique identifier of the tool.
-
-      Returns:
-          Parsed metadata object.
-      """
-  ```
 
 ### Type Hints
 
@@ -109,7 +95,7 @@ config = ScriptConfig(**CFG.my_script)
 
 - Use env variables for sensitive data (passwords, API keys).
 - Reference them in config via `${VAR_NAME}` syntax.
-
+- Keep `.env.example` up to date with the current `.env` file.
 ---
 
 ## 3. Dependency Management
@@ -145,7 +131,7 @@ Brief description of what works and what's in progress.
 ```
 
 **Rules:**
-- Keep it **concise but clear** — someone should understand project state in 30 seconds
+- Keep it **concise but clear** — someone should understand project state in 60 seconds
 - Update after each meaningful change
 - Recent changes: max 10 entries, oldest get removed
 - No implementation details — just outcomes
