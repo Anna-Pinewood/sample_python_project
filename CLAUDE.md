@@ -1,5 +1,8 @@
 # Claude Code Instructions
 
+SAMPLE FILE – MUST BE REWRITTEN FOR NEW PROJECTS
+---
+
 Это репозиторий с **best practices для Python-проектов с AI-агентами** (Claude Code, Cursor, etc.). Цель — хранить паттерны, конфигурации и правила, которые помогают эффективно кодить вместе с агентами.
 
 ## Документация
