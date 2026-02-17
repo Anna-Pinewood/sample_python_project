@@ -2,6 +2,9 @@
 
 Шаблон для Python-проектов с best practices для работы с AI-агентами (Claude Code, Cursor).
 
+Более кастомные скиллы смотри в:
+- https://github.com/Anna-Pinewood/awesome-claude-skills
+
 ## Quick Start
 
 ```bash
