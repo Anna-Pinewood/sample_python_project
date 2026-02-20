@@ -27,7 +27,7 @@ pre-commit install
 3. **Создай** `.env` файл для секретов (см. `.env.example` если есть)
 4. **Настрой** `conf/config.yaml` под свой проект
 
-## Команды
+## Quick Commands
 
 ```bash
 make format   # Форматирование кода
@@ -36,26 +36,14 @@ make test     # Запуск тестов
 make check    # Полная проверка: lint + test
 ```
 
-## Структура
+## Просмотр диффов в IDE
 
-```
-├── CLAUDE.md              # Инструкции для AI-агентов
-├── Makefile               # Команды разработки
-├── pyproject.toml         # Конфигурация проекта и инструментов
-├── .pre-commit-config.yaml
-├── conf/                  # Конфигурация
-│   └── config.yaml
-├── src/                   # Исходный код
-├── tests/                 # Тесты
-├── docs/                  # Документация
-│   └── status.md          # Статус проекта
-└── conventions/           # Правила и конвенции
-    ├── PROJECT_GUIDE.md   # Архитектура и практики
-    └── CONVENTIONS.md     # Python-конвенции
-```
+В проекте настроен хук `UserPromptSubmit` → `git add -A` (`.claude/settings.local.json`).
 
-## Документация
+**Зачем:** при работе с Claude Code в режиме `--dangerously-skip-permissions` IDE не показывает диффы автоматически. Хук стейджит все текущие изменения перед каждым запуском Claude, чтобы новые правки Claude оставались unstaged. Это позволяет видеть в Source Control только свежие изменения от последнего запуска, а не всё накопленное.
 
-- [CLAUDE.md](./CLAUDE.md) — точка входа для AI
-- [conventions/PROJECT_GUIDE.md](./conventions/PROJECT_GUIDE.md) — практики разработки
-- [conventions/CONVENTIONS.md](./conventions/CONVENTIONS.md) — Python-конвенции
+**Как пользоваться:**
+1. Claude закончил работу
+2. В Cursor: Source Control → Changes View (или назначенный шорткат)
+3. Кликнуть на файл — увидеть diff (staged = старое, unstaged = новое от Claude)
+

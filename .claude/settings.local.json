@@ -1,0 +1,25 @@
+
+{
+    "hooks": {
+      "UserPromptSubmit": [
+        {
+          "hooks": [
+            {
+              "type": "command",
+              "command": "git add -A"
+            }
+          ]
+        }
+      ],
+      "Stop": [
+        {
+          "hooks": [
+            {
+              "type": "command",
+              "command": "cursor --reuse-window --command 'workbench.view.scm'"
+            }
+          ]
+        }
+      ]
+    }
+  }
