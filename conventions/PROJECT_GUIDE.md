@@ -110,31 +110,14 @@ config = ScriptConfig(**CFG.my_script)
 
 ## 4. Documentation & Status
 
-### Status File (docs/status.md)
+### Status File (HANDOFF.md)
 
-Keep `docs/status.md` up to date — it's the single source of truth for project progress.
-
-**Format:**
-```markdown
-# Project Status
-
-## Current State
-Brief description of what works and what's in progress.
-
-## Recent Changes
-- YYYY-MM-DD: What was done (1-2 sentences)
-- YYYY-MM-DD: What was done
-
-## Next Steps
-- [ ] Task 1
-- [ ] Task 2
-```
+Keep `docs/HANDOFF.md` up to date (or local status file in the task folder).
 
 **Rules:**
 - Keep it **concise but clear** — someone should understand project state in 60 seconds
-- Update after each meaningful change
-- Recent changes: max 10 entries, oldest get removed
-- No implementation details — just outcomes
+- Update after each meaningful change (task completion, bug fixes, etc.) via `/handoff` command.
+- If context is already documented in the files, reference them, don't duplicate the content.
 
 ---
 

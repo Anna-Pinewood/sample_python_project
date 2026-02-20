@@ -11,7 +11,7 @@ SAMPLE FILE – MUST BE REWRITTEN FOR NEW PROJECTS
 |------|------------|
 | [conventions/PROJECT_GUIDE.md](./conventions/PROJECT_GUIDE.md) | Архитектура, практики, конфигурация |
 | [conventions/CONVENTIONS.md](./conventions/CONVENTIONS.md) | Детальные Python-конвенции |
-| [docs/status.md](./docs/status.md) | Текущий статус проекта |
+| [docs/HANDOFF.md](./docs/HANDOFF.md) | Передача контекста для следующего агента |
 
 ## Быстрый старт
 
@@ -75,10 +75,8 @@ make check    # Полная проверка: lint + test
 - Изменились правила конфигурации
 
 
-### docs/status.md
+### docs/HANDOFF.md
 
 **Когда обновлять:**
 - После каждого значимого изменения
 - При смене приоритетов
-
-**Формат:** кратко и понятно, чтобы за 60 сек понять состояние проекта.
